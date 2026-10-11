@@ -1,5 +1,5 @@
-﻿namespace registratie_app.Services;
-using Gegevens;
+﻿namespace registratie_app.Gegevens;
+
 
 public class dashboard
 {
@@ -18,18 +18,16 @@ public class dashboard
         var ministeries = _deelnames
             .Select(d => d.Deelnemer.Ministerie)
             .DistinctBy(m => m.Id);
-        foreach (var ministere in ministeries)
+        foreach (var ministerie in ministeries)
         {
             var deelnamesVanMinisterie =_deelnames
-                .Where(d=> d.Deelnemer.Ministerie.Id == ministere.Id)
+                .Where(d=> d.Deelnemer.Ministerie.Id == ministerie.Id)
                 .ToList();
             int totaal = deelnamesVanMinisterie.Count;
-            int aanwezig = deelnamesVanMinisterie.Count;
-            (
-                d => d.Status == Aanwezigheidsstatus.Aanwezig);
+            int aanwezig = deelnamesVanMinisterie.Count (d => d.Status == Aanwezigheidsstatus.Aanwezig);
             
             Console.WriteLine(
-                $"{ministeries.Naam}: {totaal} deelnames, " + 
+                $"{ministerie.Naam}: {totaal} deelnames, " + 
                 $"{aanwezig} aanwezig");
         }
     }
