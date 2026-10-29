@@ -1,11 +1,11 @@
 ﻿namespace registratie_app.Gegevens;
 
 
-public class dashboard
+public class Dashboard
 {
     private readonly List<Deelname> _deelnames;
 
-    public dashboard(List<Deelname> deelnames)
+    public Dashboard(List<Deelname> deelnames)
     {
         _deelnames = deelnames; 
         
