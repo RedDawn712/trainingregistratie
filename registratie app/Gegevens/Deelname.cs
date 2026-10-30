@@ -9,4 +9,6 @@ public class Deelname
 
     public Aanwezigheidsstatus Status { get; set; }
         = Aanwezigheidsstatus.Onbekend; 
+    
+    public AanwezigheidsstatusBasis? NieuweStatus { get; set; }
 }
