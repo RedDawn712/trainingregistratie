@@ -47,7 +47,8 @@ public class Dashboard
                 .ToList();
             
             int totaal = deelnamesVanMinisterie.Count;
-            int aanwezig = deelnamesVanMinisterie.Count(d => d.Status == Aanwezigheidsstatus.Aanwezig);
+            int aanwezig = deelnamesVanMinisterie.Count (d => d.NieuweStatus is Aanwezig ||
+                                                              (d.NieuweStatus == null && d.Status == Aanwezigheidsstatus.Aanwezig));
             
             Console.WriteLine(
                 $"{training.Titel}: {totaal} deelnemers, " + 
