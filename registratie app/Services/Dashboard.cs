@@ -24,8 +24,7 @@ public class Dashboard
                 .Where(d=> d.Deelnemer.Ministerie.Id == ministerie.Id)
                 .ToList();
             int totaal = deelnamesVanMinisterie.Count;
-            int aanwezig = deelnamesVanMinisterie.Count (d => d.NieuweStatus is Aanwezig ||
-                           (d.NieuweStatus == null && d.Status == Aanwezigheidsstatus.Aanwezig));
+            int aanwezig = deelnamesVanMinisterie.Count (d => d.NieuweStatus is Aanwezig );
             
             Console.WriteLine(
                 $"{ministerie.Naam}: {totaal} deelnames, " + 
@@ -47,8 +46,7 @@ public class Dashboard
                 .ToList();
             
             int totaal = deelnamesVanMinisterie.Count;
-            int aanwezig = deelnamesVanMinisterie.Count (d => d.NieuweStatus is Aanwezig ||
-                                                              (d.NieuweStatus == null && d.Status == Aanwezigheidsstatus.Aanwezig));
+            int aanwezig = deelnamesVanMinisterie.Count (d => d.NieuweStatus is Aanwezig);
             
             Console.WriteLine(
                 $"{training.Titel}: {totaal} deelnemers, " + 

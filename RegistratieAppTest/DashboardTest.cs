@@ -61,7 +61,7 @@ public class DashboardTest
     }
 
     [Fact]
-    public void Dashboard_TeltOudeStatusAanwezigMee()
+    public void Dashboard_TeltOudeStatusAanwezigNietMeerMee()
     {
         Ministerie ministerie = new Ministerie
         {
@@ -103,7 +103,7 @@ public class DashboardTest
             
             overzicht.ToonDashboardPerTraining();
 
-            Assert.Contains("1 aanwezig", uitvoer.ToString()
+            Assert.Contains("0 aanwezig", uitvoer.ToString()
             ); 
         }
         finally
