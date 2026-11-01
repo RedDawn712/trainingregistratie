@@ -1,20 +1,23 @@
 ﻿using registratie_app.Gegevens;
-using Xunit; 
+using Xunit;
 
-namespace RegistratieApp.Tests;
+namespace RegistratieAppTest;
 
 public class DeelnameTest
 {
     [Fact]
-    public void NieuweStatus_KanAanwezigBewaren()
+    public void RegistreerStatus_BewaartAanwezig()
     {
+        // Arrange
         Deelname deelname = new Deelname();
 
-        deelname.NieuweStatus = new Aanwezig();
+        // Act
+        deelname.RegistreerStatus(new Aanwezig());
 
+        // Assert
+        Assert.IsType<Aanwezig>(deelname.Status);
         Assert.Equal(
             "Aanwezig",
-            deelname.NieuweStatus!.BeschrijfStatus()
-            );
+            deelname.Status!.BeschrijfStatus());
     }
 }
