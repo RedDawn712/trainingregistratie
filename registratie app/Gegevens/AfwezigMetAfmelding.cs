@@ -1,7 +1,6 @@
 ﻿namespace registratie_app.Gegevens;
 
-public class AfwezigMetAfmelding : AanwezigheidsstatusBasis
-
+public class AfwezigMetAfmelding : Aanwezigheidsstatus
 {
     public override string BeschrijfStatus()
     {

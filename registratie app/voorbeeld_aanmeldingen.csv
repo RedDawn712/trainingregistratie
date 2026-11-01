@@ -1,0 +1,5 @@
+﻿
+TrainingId;TrainingTitel;Datum;DeelnemerId;DeelnemerNaam;MinisterieId;MinisterieNaam
+1;C# basis;2026-11-15;20;Menma;5;Testministerie
+1;C# basis;2026-11-15;21;Aki;5;Testministerie
+2;Git introductie;2026-11-16;20;Menma;5;Testministerie

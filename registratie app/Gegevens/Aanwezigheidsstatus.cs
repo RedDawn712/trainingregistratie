@@ -1,9 +1,6 @@
 ﻿namespace registratie_app.Gegevens;
 
-public enum Aanwezigheidsstatus
+public abstract class Aanwezigheidsstatus
 {
-    Onbekend,
-    Aanwezig,
-    Afgemeld,
-    Afwezig
+    public abstract string BeschrijfStatus();
 }
